@@ -1,0 +1,41 @@
+/*Image Shadow Effect*/
+@mixin imageAfterShadow(
+  $borderRadius: 15px,
+  $shadowValue: 0.3,
+){
+  &:after{
+    content: '';
+    @include positionSettings(absolute, 0, 0, 0, 0);
+    @include widthHeight(100%, 100%);
+    background-color: rgba(0,0,0,$shadowValue);
+    border-radius: $borderRadius;
+  }
+}
+/*Default Image Block Styles*/
+@mixin imageBlockStyles(
+  $maxWidthValue: 220px,
+  $widthValue: 100%,
+  $heightValue: auto
+){
+  width: 100%;
+  height: auto;
+  max-width: 197px;
+}
+/*Default Image Styles*/
+@mixin imageStyles(
+  $objectValue: cover,
+  $borderRadiusValue: 0,
+  $transitionValue: .3s
+){
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: $objectValue;
+  border-radius: $borderRadiusValue;
+  transition: all $transitionValue;
+}
+
+/*Image Scale Animation*/
+@mixin imageScaleAnimation($scaleValue: 1.1){
+  &:hover img{ transform: scale($scaleValue); }
+}

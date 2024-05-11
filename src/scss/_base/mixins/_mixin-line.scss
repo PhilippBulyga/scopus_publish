@@ -1,0 +1,15 @@
+/*Underline of Block*/
+@mixin subLine(
+  $widthValue: 100%,
+  $heightValue: 1px,
+  $backgroundColorValue: #000,
+  $positionTop: auto,
+  $positionRight: auto,
+  $positionBottom: auto,
+  $positionLeft: auto,
+){
+  content: '';
+  @include positionSettings(absolute, $positionTop, $positionRight, $positionBottom, $positionLeft);
+  @include widthHeight($widthValue, $heightValue);
+  background-color: $backgroundColorValue;
+}

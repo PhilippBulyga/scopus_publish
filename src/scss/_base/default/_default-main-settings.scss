@@ -1,0 +1,15 @@
+html, body{height: 100%}
+body{
+    @include fontSettings(400, 14px, 1.5, #0c0c0c);
+    @include displayFlex(flex-start, flex-start, column, 0);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+}
+.main{ display: flex; flex: 1 0 auto; }
+.footer{ display: flex; flex: 0 0 auto; }
+.container{
+    max-width: $container-width + $container-padding * 2;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+}

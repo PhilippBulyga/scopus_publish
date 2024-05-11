@@ -1,0 +1,24 @@
+/*animation classes*/
+
+.animationLeftBlock{ opacity: 0;  &.animationLeft{ opacity: 1; }  }
+.animationLeft{ animation: 1s leftPosition ease-in-out; }
+@keyframes leftPosition {
+  0%{transform: translateX(-150%); opacity: 0; display: none; visibility: hidden;}
+  100%{transform: translateX(0); opacity: 1; display: flex; visibility: visible;}
+}
+
+.animationRightBlock{ opacity: 0;  &.animationRight{ opacity: 1; }  }
+.animationRight{ animation: 1s rightPosition ease-in-out; }
+@keyframes rightPosition {
+  0%{transform: translateX(150%); opacity: 0; display: none; visibility: hidden;}
+  100%{transform: translateX(0); opacity: 1; display: flex; visibility: visible;}
+}
+
+.animationOpacityBlock{ opacity: 0;  &.animationOpacity{ opacity: 1; }  }
+.animationOpacity{ animation: 1s opacityPosition ease-in-out; }
+@keyframes opacityPosition {
+  0%{opacity: 0; display: none; visibility: hidden;}
+  100%{opacity: 1; display: flex; visibility: visible;}
+}
+
+

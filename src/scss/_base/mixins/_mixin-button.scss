@@ -1,0 +1,34 @@
+/*Reset Default Styles of Button*/
+@mixin buttonReset(){
+  border: none;
+  outline: none;
+  overflow: hidden;
+}
+/*Button Default Styles*/
+@mixin buttonStyles(
+    $buttonBackgroundColor: #fff,
+    $buttonPaddingValue: 0px,
+    $borderRadiusValue: 0px,
+    $buttonTextTransform: none,
+    $buttonTransitionTime: .3s,
+){
+  background-color: $buttonBackgroundColor;
+  padding: $buttonPaddingValue;
+  border-radius: $borderRadiusValue;
+  text-transform: $buttonTextTransform;
+  transition: all $buttonTransitionTime ease-in-out;
+}
+/*Button Hover Effect (background color is border)*/
+@mixin buttonBackgroundHover(
+  $buttonBackgroundColor: #fff,
+  $buttonChangeColor: #000
+) {
+  &:hover {
+    background-color: $buttonBackgroundColor;
+    color: $buttonChangeColor;
+  }
+}
+/*Button Hover Effect (dark color of background)*/
+@mixin buttonDarkColorHover($buttonDarkColor: #000){
+  &:hover {background-color: $buttonDarkColor;}
+}

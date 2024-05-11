@@ -1,0 +1,34 @@
+/*Display grid simple function*/
+@mixin gridDisplay
+(
+  $grisColumns: 1fr,
+  $gapGrid: 0px,
+){
+  display: grid;
+  grid-template-columns: $grisColumns;
+  grid-gap: $gapGrid;
+}
+
+/*Display flex simple function*/
+@mixin displayFlex
+(
+  $alignItems: center,
+  $justifyContent: center,
+  $flexDirection: row,
+  $flexGap: 15px,
+){
+  display: flex;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+  flex-direction: $flexDirection;
+  gap: $flexGap;
+}
+
+/*default setting of width height values*/
+@mixin widthHeight(
+  $widthValue: 100%,
+  $heightValue: auto,
+){
+  width: $widthValue;
+  height: $heightValue;
+}

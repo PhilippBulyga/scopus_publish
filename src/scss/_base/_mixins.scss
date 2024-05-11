@@ -1,0 +1,28 @@
+@import "./mixins/mixin-fonts";
+@import "./mixins/mixin-layout";
+@import "./mixins/mixin-image";
+@import "./mixins/mixin-line";
+@import "./mixins/mixin-button";
+
+/*default setting of position function*/
+@mixin positionSettings(
+  $positionValue: absolute,
+  $topValue: auto,
+  $rightValue: auto,
+  $bottomValue: auto,
+  $leftValue: auto,
+){
+  position: $positionValue;
+  top: $topValue;
+  bottom: $bottomValue;
+  left: $leftValue;
+  right: $rightValue;
+}
+/*Z-index for element*/
+@mixin zIndexRelative( $zIndexValue: 5 ){
+  position: relative;
+  z-index: $zIndexValue;
+}
+
+
+
